@@ -5,5 +5,8 @@ def main():
     
     print(file_contents)
 
+    words = []
+    words = file_contents.split()
+    print(len(words))
 
 main()
