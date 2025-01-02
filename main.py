@@ -1,13 +1,10 @@
 def main():    
     
     file_contents = get_book_text("books/frankenstein.txt")
-    
-    print(file_contents)
 
     num_words = get_num_words(file_contents)
     print(num_words)
     letters = get_num_letters(file_contents)
-    print(letters)
     print(print_report(letters))
 
 
