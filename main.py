@@ -8,6 +8,7 @@ def main():
     print(num_words)
     letters = get_num_letters(file_contents)
     print(letters)
+    print(print_report(letters))
 
 
 def get_book_text(path):
@@ -31,5 +32,12 @@ def get_num_letters(words):
             if letter == char:
                 letters[char] += 1
     return letters
+
+def print_report(letters):
+    res = {key: val for key, val in sorted(letters.items(), key = lambda ele: ele[1], reverse=True)}
+    for i in res:
+        print(f"The {i} character was found {res[i]} times")
+    return
+
 
 main()
